@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slick-dots .slick-active div{
+    border-right: 3px solid #F97316 !important;
+    color:#F97316 !important;
+}
+
+@media(max-width:640px){
+    .slick-dots{
+        left: 0px !important;
+    }
+    .ami{
+        padding: 0 !important;
+    }
+}
+
+
+/* .menubg{
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    opacity: 0;
+}
+
+.menu:hover::after{
+opacity: 1;
+} */
