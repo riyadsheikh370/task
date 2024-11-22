@@ -1,14 +1,20 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React from 'react'
+import { createContext } from 'react'
 import axios from 'axios';
+import { useEffect, useState } from 'react'
 
-let apiData = createContext
+let apiData = createContext()
+
+
+
 
 const ContextApi = ({ children }) => {
 
     let [info, setInfo] = useState([])
 
-    let getData = () => axios.get("https://api.shope.com.bd/api/v1/public/hero-categories").then((response) => {
-        setInfo(response.data.products)
+
+    let getData = () => axios.get("https://dummyjson.com/products").then((response) => {
+        setInfo(response.data.products);
     })
 
     useEffect(() => {
@@ -22,4 +28,4 @@ const ContextApi = ({ children }) => {
     )
 }
 
-export default { ContextApi, apiData }
+export { ContextApi, apiData }

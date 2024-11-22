@@ -5,6 +5,7 @@ import Container from './Container';
 import Logo from "../assets/logo.png"
 import Logo2 from "../assets/logo2.png"
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
 
@@ -16,28 +17,30 @@ const Navbar = () => {
                         <img src={Logo} alt="" />
                         <div className=" relative group">
                             <a className='flex items-center bg-[#EFF0F5]  ml-5 p-[7px] border-[1px] rounded-xl border-[#f5efef]'>Category<IoIosArrowDown /></a>
-                            <div className="absolute z-50 h-[480px] w-[300px] bg-white top-[42px]  duration-700 ease-in-out group-hover:left-0 left-[-1000px]">
-                                <ul>
-                                    {/* <div className="flex justify-between menubg items-center"> */}
-                                    <li className='text-[#2E2E2E] pt-[30px] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center'>Womens’ & Girls’ Fashion <IoIosArrowForward className='ml-[60px]' /></li>
-                                    {/* <div className="menu h-[460px] w-[300px] border-r-[1px] border-r-[#F97316] border-l-[1px] border-l-[#F97316] bg-white top-[20px] left-[300px]">
+                            <div className="absolute hidden group-hover:flex z-50 h-[480px] w-[300px] bg-white top-[42px] ease-out duration-300 ...">
+                                <Link to="/product">
+                                    <ul>
+                                        {/* <div className="flex"> */}
+                                        <li className='text-[#2E2E2E] pt-[30px] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center'>Womens’ & Girls’ Fashion <IoIosArrowForward className='ml-[60px]' /></li>
+                                        {/* <div className="menu absolute h-[460px] w-[300px] border-r-[1px] border-r-[#F97316] border-l-[1px] border-l-[#F97316] bg-white top-[20px] left-[300px]">
                                             <h4 className='pl-2 pt-[5px]'>kids bags</h4>
                                         </div>
                                     </div> */}
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Health & Beauty <IoIosArrowForward className='ml-[129px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Watches, Bags, Jewellery <IoIosArrowForward className='ml-[56px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center'>Men's & Boys' Fashion <IoIosArrowForward className='ml-[78px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Mother & Baby <IoIosArrowForward className='ml-[136px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Electronics Devices <IoIosArrowForward className='ml-[99px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>TV & Home Appliances <IoIosArrowForward className='ml-[73px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Electronic Accessories <IoIosArrowForward className='ml-[74px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Groceries <IoIosArrowForward className='ml-[170px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Home & Lifestyle <IoIosArrowForward className='ml-[116px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Sports & Outdoors <IoIosArrowForward className='ml-[105px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Automobile  <IoIosArrowForward className='ml-[158px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Computer and laptop  <IoIosArrowForward className='ml-[86px]' /></li>
-                                    <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Pet Supplies <IoIosArrowForward className='ml-[150px]' /></li>
-                                </ul>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Health & Beauty <IoIosArrowForward className='ml-[129px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Watches, Bags, Jewellery <IoIosArrowForward className='ml-[56px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center'>Men's & Boys' Fashion <IoIosArrowForward className='ml-[78px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Mother & Baby <IoIosArrowForward className='ml-[136px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Electronics Devices <IoIosArrowForward className='ml-[99px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>TV & Home Appliances <IoIosArrowForward className='ml-[73px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Electronic Accessories <IoIosArrowForward className='ml-[74px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Groceries <IoIosArrowForward className='ml-[170px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Home & Lifestyle <IoIosArrowForward className='ml-[116px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Sports & Outdoors <IoIosArrowForward className='ml-[105px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Automobile  <IoIosArrowForward className='ml-[158px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Computer and laptop  <IoIosArrowForward className='ml-[86px]' /></li>
+                                        <li className='text-[#2E2E2E] hover:text-[#F97316] text-[16px] py-1 duration-300 ease-in-out pl-3 hover:pl-6 flex items-center group'>Pet Supplies <IoIosArrowForward className='ml-[150px]' /></li>
+                                    </ul>
+                                </Link>
                             </div>
 
                         </div>
